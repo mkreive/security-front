@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles/main-styles.css" th:href="@{/styles/main-style.css}" />
+    <title>Home</title>
+</head>
+
+<body>
+<div class="navigation">
+    <a class="nav" th:href="@{/home}">Home</a>
+    <a class="nav" th:href="@{/leaders}">Leaders</a>
+    <a class="nav" th:href="@{/systems}">Systems</a>
+</div>
+
+<div class="container">
+    <h1 class="header">Home</h1>
+
+    <p class="text">Welcome to My company home page!</p>
+
+    <p>
+        User: <span sec:authentication="principal.username"></span>
+        <br><br>
+        Role(s): <span sec:authentication="principal.authorities"></span>
+    </p>
+
+    <div sec:authorize="hasRole('MANAGER')">
+        <p>
+            <a th:href="@{/leaders}">Leadership Meeting</a>
+            (Only for manager peeps)
+        </p>
+        <hr>
+    </div>
+
+    <div sec:authorize="hasRole('ADMIN')">
+        <p>
+            <a th:href="@{/systems}">IT Systems Meeting</a>
+            (Only for admin peeps)
+        </p>
+        <hr>
+    </div>
+
+    <form action="#" th:action="@{/logout}" method="POST">
+        <input class="button" type="submit" value="Logout"/>
+    </form>
+</div>
+
+</body>
+</html>

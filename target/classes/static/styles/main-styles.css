@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+.navigation {
+width: 100%;
+height: auto;
+background-color: #3ba66f;
+display: flex;
+padding: 1.2rem 5rem;
+align-items: center;
+gap: 1.8rem;
+}
+
+.nav {
+font-weight: 600;
+font-size: 1.2rem;
+cursor: pointer;
+color: #d2d8d6;
+}
+
+.nav:hover {
+color: #94cc61;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: #d2d8d6;
+  padding: 3rem 5rem;
+}
+
+.header {
+color: #705dd6;
+font-size: 1.8rem;
+text-transform: uppercase;
+font-weight: 800;
+font-family: inherit;
+background-color: red;
+}
+
+.login-box {
+display: flex;
+flex-direction: column;
+gap: 3rem;
+padding: 2rem 1rem;
+}
+
+.card {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+.form {
+overflow: hidden;
+font-size: 1rem;
+padding: 3rem;
+display: flex;
+flex-direction: column;
+gap: 0.2rem;
+}
+
+.text {
+color: green;
+font-size: 300px;
+}
+
+.button {
+font-size: 1.2rem;
+border-radius: 0.2rem;
+border: none;
+background-color: #3ba66f;
+color: #d2d8d6;
+font-weight: 600;
+padding: 0.3rem 1rem;
+cursor: pointer;
+max-width: max-content;
+}
+
+.button:hover {
+background-color: #94cc61;
+color: #705dd6;
+}
+
+a {
+text-decoration: none;
+color: #fff;
+font-size: 1rem;
+}
+
+label {
+color: #393E41;
+font-size 0.6rem;
+font-weight: 500;
+}
+
+.input {
+min-width: 20rem;
+background-color: #fff;
+color: #393E41;
+border-radius: 0.2rem;
+padding: 0.4rem 0.6rem;
+margin-bottom: 1rem;
+outline: none;
+border: 0.1rem solid #705dd6;
+}
+
+input::placeholder {
+font-size: 0.8rem;
+opacity: 0.8;
+color: #94cc61;
+}
+
+.alert {
+color: #F24C00;
+}
